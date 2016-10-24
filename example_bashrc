@@ -1,0 +1,73 @@
+# .bashrc
+
+# User specific aliases and functions
+#export AtlasSetup=/data/atlasb04/software16_slc5_gcc43/AtlasSetup
+#export AtlasSetup=/data/atlasb04/software17_slc5_gcc43/AtlasSetup
+export AtlasSetup=/afs/cern.ch/atlas/software/dist/AtlasSetup
+alias asetup="source $AtlasSetup/scripts/asetup.sh" 
+export AtlasSetup17="/data/atlas01/atlas/releases/17.0.5/AtlasSetup"
+alias asetup17="source $AtlasSetup17/scripts/asetup.sh" 
+#export ATHENA_VERSION=17.0.5.5.2
+export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+alias setupATLAS='source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh'
+
+alias 'rm=rm -i'
+alias 'ls=ls -C --color -h'
+alias 'xterm=xterm -bg black -fg yellow -title xterm_ppe &'
+
+#export KRB5CCNAME=FILE:/tmp/krb5cc_`id -u $USER`_cern
+# Get a CERN kerberos ticket using "kinit-cern $USER@CERN.CH"
+alias ct="KRB5CCNAME=/tmp/krb5cc_"`id -u`"_cern" # cern-ticket
+
+#export SVNUSR="svn+ssh://svn.cern.ch/reps/atlasusr" #old
+export SVNUSR="svn+ssh://svn.cern.ch/reps/atlas-abuzatu"
+export SVN_EDITOR="emacs -nw"
+export initialroot="/nfs/atlas/vh01/fromAdrian/JER/ATLAS/initialroot"
+export outputroot="/nfs/atlas/vh01/fromAdrian/JER/ATLAS/outputroot"
+#export Analyses="/afs/phas.gla.ac.uk/user/a/abuzatu/public_ppe"
+export Analyses=${HOME}/code
+export All=${Analyses}/BuzatuAll
+export C=${Analyses}/CxAODFramework
+export d=${HOME}/data
+
+export vh="/afs/phas.gla.ac.uk/user/a/abuzatu/public_ppe/HiggsAnalysis/trunk"
+export afs="/afs/phas.gla.ac.uk/data/atlas"
+
+#set up latest Latex from CERN AFS
+export PATH=/afs/cern.ch/sw/XML/texlive/latest/bin/x86_64-linux:$PATH
+
+#setting up latest version of ROOT (5.34.07) and also PyROOT with it
+#source /data/ppe01/sl5x/x86_64/root/5.34.07/setup.sh
+
+#alias 'python1=/afs/phas.gla.ac.uk/system/sl5x/x86_64/python/3.3.2/bin/python3.3'
+#alias 'python2=/afs/phas.gla.ac.uk/system/sl5x/x86_64/python/2.7.1/bin/python2.7'
+#alias 'python22=/afs/phas.gla.ac.uk/system/sl5x/x86_64/python/2.7.1/bin/python'
+#alias 'python3=/afs/phas.gla.ac.uk/system/sl5x/x86_64/python/2.7.5/bin/python2.7'
+#alias 'python=/afs/phas.gla.ac.uk/system/sl5x/x86_64/python/2.7.5/bin/python2.7'
+#alias 'python=/afs/phas.gla.ac.uk/system/sl5x/x86_64/python/2.7.1/bin/python2.7'
+
+#alias 'python=/usr/bin/python'
+
+
+#setting up Python 2.7.1 to work with ROOT (5.34.07)
+#source /afs/phas.gla.ac.uk/system/sl5x/x86_64/python/2.7.1/setup.sh
+
+#setting up latest version of ROOT (5.34.07) and to work with Python 2.7.1 
+#source /afs/phas.gla.ac.uk/system/sl5x/x86_64/root/5.34.07_python-2.7.1/setup.sh
+
+#cd ${Analyses}/BuzatuAll
+#source setup.sh
+
+
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+###cd public_ppe
+#cd ${vh}
+#source ~/scripts/setup_glantp.sh 00-00-49 
+
+#cd $jer/PyROOT
+#source setup.sh
