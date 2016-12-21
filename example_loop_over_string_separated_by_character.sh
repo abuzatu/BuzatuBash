@@ -2,7 +2,6 @@
 #if there is no parameter, it stops and it gives the instructions
 if [ $# -ne 1 ]; then
 cat <<EOF
-EOF
 Usage: ./doThinTrees.sh WH115+ZH115
 EOF
 exit 1
