@@ -10,3 +10,6 @@
 
 # to replace Dyn. with Dyn_ in all .pdf
 #for i in *.pdf ; do mv "$i" "${i//Dyn./Dyn_}"; done
+
+# replace all dphill to dphi in all .png
+#for i in *.png ; do mv "$i" "${i//dphill/dphi}"; done
