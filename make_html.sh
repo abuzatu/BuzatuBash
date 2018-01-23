@@ -19,6 +19,7 @@ rm -f ${INDEX_FILE}
 for FILE in `ls -1 *.pdf`
 do
     STEM=${FILE%.*}
+    convert ${FILE} ${STEM}.png
     echo "<br> ${STEM} <br>" >> ${INDEX_FILE}
     echo "<br> <a href=\"./${STEM}.pdf\"> <img src=\"./${STEM}.png\" alt=\"Mountain View\"> </a> <br>" >> ${INDEX_FILE}
 done
