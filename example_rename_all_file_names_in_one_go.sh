@@ -16,3 +16,6 @@
 
 # on git raname files from mc16h to mc16hp
 #for i in *mc16h*.txt ; do git mv "$i" "${i//mc16h/mc16hp}"; done
+
+# convert all pdf in png
+for i in plot_*pdf ; do convert "$i" "${i//pdf/png}"; done
