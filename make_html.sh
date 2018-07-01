@@ -19,7 +19,11 @@ rm -f ${INDEX_FILE}
 for FILE in `ls -1 *.pdf`
 do
     STEM=${FILE%.*}
-    # convert ${FILE} ${STEM}.png
+    # if .png file does not exist, convert .pdf in .png
+    if [ ! -f "${STEM}.png" ]; then
+	echo "File ${STEM}.png not found, so converting ${STEM}.pdf to ${STEM}.png"
+	convert ${FILE} ${STEM}.png
+    fi
     echo "<br> ${STEM} <br>" >> ${INDEX_FILE}
     echo "<br> <a href=\"./${STEM}.pdf\"> <img src=\"./${STEM}.png\" alt=\"Mountain View\"> </a> <br>" >> ${INDEX_FILE}
 done
