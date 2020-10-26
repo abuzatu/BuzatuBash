@@ -1,1 +1,1 @@
-Repo created by Adrian Buzatu (adrian.buzatu@cern.ch) with bash examples to use later on too.
+Repo created by Adrian Buzatu (adrian.buzatu@cern.ch) with bash examples to improve futher developments.
